@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Birthday Surprise ❤️</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+ margin:0;
+ background:#16080e;
+ color:#fff1e8;
+ font-family:Georgia,serif;
+ text-align:center;
+ overflow-x:hidden;
+}
+
+.page{
+ display:none;
+ min-height:100vh;
+ height:auto;
+ padding:65px 20px;
+ justify-content:center;
+ align-items:center;
+ flex-direction:column;
+ background:radial-gradient(circle,#572033,#16080e 75%);
+}
+
+.page.active{display:flex}
+
+h1{
+ color:#f5d49b;
+ font-size:clamp(30px,6vw,48px);
+}
+
+h2{color:#f5d49b}
+
+p{
+ font-size:19px;
+ line-height:1.8;
+ max-width:750px;
+}
+
+.gold{color:#f5d49b}
+
+button{
+ background:#e5bd83;
+ color:#32101d;
+ border:0;
+ padding:13px 28px;
+ border-radius:30px;
+ font-size:17px;
+ cursor:pointer;
+ margin:20px 8px;
+}
+
+button:hover{background:#fff0d3}
+
+.card{
+ max-width:750px;
+ width:100%;
+ padding:28px;
+ border:1px solid #c99b63;
+ border-radius:20px;
+ background:#260e19;
+ box-shadow:0 0 30px #a66a6a33;
+}
+
+.poster{
+ max-width:500px;
+ width:95%;
+ padding:25px;
+ margin:20px auto;
+ border:2px solid #e5bd83;
+ border-radius:15px;
+ background:#fff0df;
+ color:#4b1829;
+ box-shadow:0 0 30px #d4a35c55;
+}
+
+.poster h2{color:#70243b}
+
+.list{
+ max-height:300px;
+ overflow-y:auto;
+ line-height:2;
+ padding:15px;
+ color:#ffe5c6;
+}
+
+.scroll-card{
+ max-width:850px;
+ width:100%;
+ padding:25px;
+ border:1px solid #c99b63;
+ border-radius:20px;
+ background:#260e19;
+ box-shadow:0 0 30px #a66a6a33;
+ text-align:center;
+}
+
+.urdu{
+ direction:rtl;
+ text-align:right;
+ font-family:serif;
+ font-size:21px;
+ line-height:2.2;
+}
+
+.urdu p{
+ font-size:21px;
+ line-height:2.2;
+}
+
+.english p{
+ font-size:19px;
+ line-height:2;
+ margin-bottom:25px;
+}
+
+.heart{
+ position:fixed;
+ bottom:-30px;
+ z-index:5;
+ color:#ff789c;
+ animation:fly 8s linear infinite;
+ pointer-events:none;
+}
+
+@keyframes fly{
+ 0%{transform:translateY(0) rotate(0);opacity:0}
+ 15%{opacity:1}
+ 100%{transform:translateY(-115vh) rotate(360deg);opacity:0}
+}
+
+.small{
+ letter-spacing:5px;
+ color:#e8bd8b;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<section class="page active">
+ <div class="small">A LITTLE SURPRISE FOR YOU</div>
+ <h1>Someone Special Has a Birthday ❤️</h1>
+ <p>Today is all about celebrating you. I have made something special with lots of love.</p>
+ <button onclick="nextPage()">Open Your Surprise 💌</button>
+</section>
+
+<!-- PAGE 2 -->
+
+<section class="page">
+ <div class="small">TODAY IS YOUR DAY</div>
+ <h1>Happy Birthday My Love ❤️</h1>
+
+ <div class="poster">
+  <h2>Happy Birthday My Man 🎂</h2>
+  <p>My favourite person. My happiness. My beautiful blessing. ❤️</p>
+ </div>
+
+ <p class="gold">My Husband • My Soulmate • My Forever Person</p>
+ <p>May your day be as wonderful as your heart.</p>
+
+ <button onclick="nextPage()">Next ❤️</button>
+</section>
+
+<!-- PAGE 3 -->
+
+<section class="page">
+ <h1>My Wishes & Duas 🤲</h1>
+ <div class="card list" id="wishes"></div>
+ <button onclick="nextPage()">More Love 💗</button>
+</section>
+
+<!-- PAGE 4 -->
+
+<section class="page">
+ <h1>100 Kisses For You 💋</h1>
+ <div class="card list" id="kisses"></div>
+ <button onclick="nextPage()">Keep Going ❤️</button>
+</section>
+
+<!-- PAGE 5 -->
+
+<section class="page">
+ <h1>100 Reasons To Say...</h1>
+ <div class="card list" id="love"></div>
+ <button onclick="nextPage()">Your Birthday Messages 💌</button>
+</section>
+
+<!-- PAGE 6: URDU MESSAGE -->
+
+<section class="page">
+
+ <div class="small">FROM MY HEART TO YOURS</div>
+ <h1>ایک خاص پیغام آپ کے لیے ❤️</h1>
+
+ <div class="scroll-card urdu">
+
+ <p>🎂🕯️𓆩♡𓆪✨🌍🫀🥹💐🕊️</p>
+
+ <h2>♡ Happy Birthday My Jaan ♡ 🎀🫶🏻🫀</h2>
+
+ <p>
+ آج کا دن میرے لیے دنیا کے سب سے خوبصورت دنوں میں سے ایک ہے،
+ کیونکہ آج اُس شخص کا دن ہے جو میری دعاؤں، میری مسکراہٹوں
+ اور میرے سکون کی وجہ ہے… 👑🥰🫀🥹🌍💐🤲🏻
+ </p>
+
+ <p>
+ ♡ آپ صرف ایک شخص نہیں ہیں، آپ میری خوشی، میری عادت
+ اور میرے دل کا سب سے حسین احساس ہیں… 🕊️♥️
+ </p>
+
+ <p>
+ آپ کو دیکھ کر دل کو وہ سکون ملتا ہے 💋🌈😌
+ جو شاید پوری دنیا بھی نہ دے سکے… 🥺🌷
+ </p>
+
+ <p>
+ 💌 May your smile always shine brighter than the stars 🎉🤩😘✨
+ and may Allah fill your life with endless happiness,
+ success & love… Ameen 🤲🏻🌸
+ </p>
+
+ <p>
+ ♡ آپ کی ہر خواہش پوری ہو، ہر دعا قبول ہو،
+ اور آپ ہمیشہ ایسے ہی ہنستے مسکراتے رہیں،
+ کیونکہ آپ کی خوشی ہی میری خوشی ہے… 🥹🫀
+ </p>
+
+ <h2>🎂✨ On This Beautiful Day, I Just Want To Say...</h2>
+
+ <p>
+ You are the most precious part of my life 💖🌍
+ </p>
+
+ <p>
+ And I never want to lose someone as special as you… 🥹🫶🏻
+ </p>
+
+ <p>🕯️💐</p>
+
+ <p>
+ ♡ کبھی کبھی کچھ لوگ زندگی میں سکون بن کر آتے ہیں…
+ 💋🫂🤩😘 اور آپ میرے لیے وہی سکون ہیں… 🕊️♥️🥹
+ </p>
+
+ <p>
+ آپ کے بغیر ہر خوشی ادھوری لگتی ہے،
+ اور آپ کے ساتھ ہر لمحہ خوبصورت… 🌸
+ </p>
+
+ <h2>🎀 HAPPY BIRTHDAY JAAN 🎀</h2>
+
+ <p>
+ اللہ آپ کو ہمیشہ خوش رکھے، ہر بری نظر سے بچائے،
+ اور آپ کی زندگی محبتوں سے بھر دے… 🤍🌷
+ </p>
+
+ <h2>╭─❀⊰ LOVE YOU FOREVER ⊱❀─╮</h2>
+
+ <p>
+ Some people become the reason of our peace…
+ and you are one of them. 🌍🥹
+ </p>
+
+ <p>╰─❀⊰ 🎂🕯️💐</p>
+
+ <p>✨</p>
+
+ </div>
+
+ <button onclick="nextPage()">Next Surprise ❤️</button>
+
+</section>
+
+<!-- PAGE 7: ENGLISH MESSAGES -->
+
+<section class="page">
+
+ <div class="small">THREE LITTLE MESSAGES FOR YOU</div>
+ <h1>Words From My Heart 💖</h1>
+
+ <div class="scroll-card english">
+
+ <h2>✨🎂💖 Happy Birthday My Love 💖🎂✨</h2>
+
+ <p>
+ To the man who owns my heart 💓, today the world celebrates you 🌍🎉.
+ You are my happiness 😍, my peace 🕊️, my reason to smile every single day 🌸🌞.
+ With you, every moment feels magical ✨, every memory becomes a treasure 📸💎,
+ and every dream feels possible 🌈💫.
+ Thank you for being the most loving, caring, and understanding boyfriend 💕🫶.
+ On your special day, I pray Allah blesses you with endless success 🌟,
+ good health 💪, and a lifetime full of love 💞.
+ I promise to hold your hand 🤝 and heart ❤️ forever.
+ Happiest Birthday, my everything 🥰🎂🎁.
+ </p>
+
+ <hr style="border:1px solid #c99b63">
+
+ <h2>💝🎉🥳 Happy Birthday to My Favorite Person 🥳🎉💝</h2>
+
+ <p>
+ My love, today is all about you 🌹.
+ I’m beyond grateful for your love 💖, your kindness 🌟,
+ and the way you make me feel so special every single day 😍.
+ You’re not just my boyfriend but my safe place 🏡,
+ my strength 💪, my best friend 👩‍❤️‍👨, and my soulmate 💕.
+ May this year bring you endless happiness 🌈, success 🏆,
+ and all the blessings you deserve 🤲✨.
+ I’ll always be right here, loving you deeply 💓,
+ supporting you endlessly 🌸, and cheering you on forever 🎊.
+ Happy Birthday, jaanu 💕🎂🎁.
+ </p>
+
+ <hr style="border:1px solid #c99b63">
+
+ <h2>🌸💍💖 Happy Birthday to My Forever 💖💍🌸</h2>
+
+ <p>
+ Every day with you feels like a blessing 🌹✨.
+ But today is extra special because it’s the day you came into this world 🎂🎉.
+ You are the reason behind my biggest smiles 😘,
+ the person who makes my heart beat faster ❤️‍🔥,
+ and the one I want to spend forever with 💑.
+ On your birthday, I just want to remind you how deeply I love you 💕,
+ how proud I am of you 🌟, and how grateful I am to call you mine 🫶.
+ May all your wishes come true 🌈🎁,
+ and may your journey ahead be filled with love, laughter, and success ✨🏆.
+ Happy Birthday, meri jaan 😍🎉❤️.
+ </p>
+
+ </div>
+
+ <button onclick="nextPage()">One Last Surprise 🎀</button>
+
+</section>
+
+<!-- PAGE 8: FINAL -->
+
+<section class="page">
+
+ <div class="small">WITH ALL MY LOVE</div>
+
+ <h1>Happy Birthday My Soulmate ❤️</h1>
+
+ <p>Happy Birthday My Love.</p>
+ <p>Happy Birthday My Man.</p>
+ <p>My Husband. My Soulmate. My Favourite Human.</p>
+
+ <p>
+ May Allah always protect you, bless you with happiness,
+ success, good health and endless peace.
+ </p>
+
+ <h1>Ummmmmaaaaaahhhhhh 💋</h1>
+
+ <p class="gold">You deserve all the happiness in this world. ❤️</p>
+
+ <p>Always sending you love, duas and a million kisses.</p>
+
+ <h2>THE END... BUT MY LOVE HAS NO END ❤️</h2>
+
+</section>
+
+<script>
+
+let current=0;
+const pages=document.querySelectorAll('.page');
+
+function nextPage(){
+
+ pages[current].classList.remove('active');
+
+ current++;
+
+ if(current>=pages.length){
+  current=0;
+ }
+
+ pages[current].classList.add('active');
+
+ window.scrollTo(0,0);
+
+}
+
+const duas=[
+"May Allah bless you with a long, happy and healthy life. 🤲",
+"May every good dream of yours come true.",
+"May Allah protect you from every difficulty.",
+"May your heart always remain peaceful.",
+"May success find you wherever you go.",
+"May Allah put barakah in everything you do.",
+"May your smile never fade.",
+"May your days be filled with happiness.",
+"May Allah keep you safe and surrounded by goodness.",
+"May all your sincere prayers be accepted."
+];
+
+const extra=[
+"Happy Birthday My Love ❤️",
+"Happy Birthday My Man ❤️",
+"May Allah grant you endless happiness.",
+"You deserve every beautiful thing in life.",
+"May your future be brighter than your dreams.",
+"May you always have reasons to smile.",
+"May Allah guide you towards what is best.",
+"May your efforts bring wonderful results.",
+"May peace and love always surround you.",
+"Stay blessed, happy and healthy."
+];
+
+document.getElementById('wishes').innerHTML=
+[...duas,...extra,...duas,...extra]
+.map(x=>`<p>${x}</p>`).join('');
+
+document.getElementById('kisses').innerHTML=
+Array.from({length:100},(_,i)=>
+`<p>${i+1}. Ummmmmaaaaaahhhhhh 💋</p>`
+).join('');
+
+document.getElementById('love').innerHTML=
+Array.from({length:100},(_,i)=>
+`<p>${i+1}. I Love You ❤️</p>`
+).join('');
+
+function floatingHeart(){
+
+ const h=document.createElement('div');
+
+ h.className='heart';
+
+ h.innerHTML=['❤️','💗','💕','💖','💘']
+ [Math.floor(Math.random()*5)];
+
+ h.style.left=Math.random()*100+'vw';
+
+ h.style.fontSize=(18+Math.random()*22)+'px';
+
+ h.style.animationDuration=(6+Math.random()*6)+'s';
+
+ document.body.appendChild(h);
+
+ setTimeout(()=>h.remove(),12000);
+
+}
+
+setInterval(floatingHeart,450);
+
+</script>
+
+</body>
+</html>
